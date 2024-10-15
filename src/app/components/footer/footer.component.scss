@@ -1,0 +1,64 @@
+
+@import "../../../styles.scss";
+@import "../../../color-variables.scss";
+
+footer {
+
+    margin-top: 40px;
+
+    position: absolute;
+
+
+    .socials {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 70px;
+
+    background: $bg-secondary;
+    color: white;
+
+    text-align: justify;
+
+    h3 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    h5{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 14;
+        font-weight: 400;
+    }
+
+    .text {
+        flex: 1;
+    }
+    .btn{
+        background: $light-primary-color;
+
+    }
+
+}
+@media (min-width: 1080px) {
+    .form-section {
+        flex-direction: row;
+        gap: 115px;
+
+        padding: 40px 120px;
+    }
+}
