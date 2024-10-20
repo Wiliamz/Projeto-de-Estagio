@@ -23,6 +23,7 @@ export class NewsletterFormComponent {
 
   onSubmit(){
     console.log(this.newsletterForm.value);
+    
   }
 }
 

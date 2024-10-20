@@ -1,0 +1,5 @@
+<div style="display: block" *ngIf="isBrowser">
+  <h2>Gráfico de Acessos ao Site</h2>
+  <canvas baseChart [data]="chartData" [options]="chartOptions" chartType="bar">
+  </canvas>
+</div>

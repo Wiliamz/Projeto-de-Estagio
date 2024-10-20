@@ -1,0 +1,28 @@
+
+<app-header></app-header>
+<div class="login-container d-flex align-items-center justify-content-center vh-100">
+    <div class="card shadow-lg p-4" style="width: 350px;">
+      <h2 class="text-center mb-4">Login</h2>
+      <form (submit)="onLogin()">
+        <div class="form-group mb-3">
+          <label for="username">Usuário</label>
+          <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control" placeholder="Digite seu usuário" required>
+        </div>
+        <div class="form-group mb-4">
+          <label for="password">Senha</label>
+          <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Digite sua senha" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+      </form>
+      <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+    </div>
+  </div>
+  
+
+<!-- <div *ngIf="auth.user | async as user; else loginButton">
+  <p>Welcome, {{ user.displayName }}!</p>
+  <button (click)="logout()">Logout</button>
+</div>
+<ng-template #loginButton>
+  <button (click)="login()">Login with Google</button>
+</ng-template> -->

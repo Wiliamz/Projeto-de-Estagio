@@ -2,6 +2,12 @@
 main{
     display: flex;
     justify-content: center;
-    margin: 10%;
+    margin: 8%;
 
+    .btn{
+        justify-self: center;
+        display: grid;
+        align-self: center;
+        margin: 2%;
+    }
 }

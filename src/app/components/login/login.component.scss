@@ -1,0 +1,36 @@
+/* Centraliza a tela de login na página */
+.login-container {
+  background-color: white;
+  /* Fundo claro */
+}
+
+.card {
+  border-radius: 10px;
+  /* Canto arredondado para o card */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+}
+
+/* Ajustes no botão */
+button.btn-primary {
+  background-color: #007bff;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Estiliza a área de input */
+input.form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+/* Alerta de erro */
+.alert {
+  font-size: 0.9rem;
+}
