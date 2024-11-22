@@ -1,29 +1,25 @@
 @import "../../../styles.scss";
 @import "../../../color-variables.scss";
 
-
 .form-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    padding: 40px 70px;
-
+    padding: 2.5rem 4.375rem;  // Unidades em rem para padding
     background: $bg-secondary;
     color: white;
-
     text-align: justify;
 
-
     h3 {
-        font-size: 36px;
+        font-size: 2.25rem;  // Usando rem para responsividade
         font-weight: 600;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
 
     p {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
     }
 
@@ -33,12 +29,10 @@
 
     form {
         flex: 1;
-
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-
         width: 100%;
 
         input {
@@ -46,9 +40,9 @@
             border: none;
             border-bottom: 1px solid white;
             width: 100%;
-
-            height: 60px;
-            margin-bottom: 40px;
+            height: 3.75rem;  // Rem para altura
+            margin-bottom: 2.5rem;  // Ajustado para rem
+            padding: 1%;
         }
     }
 }
@@ -56,8 +50,52 @@
 @media (min-width: 1080px) {
     .form-section {
         flex-direction: row;
-        gap: 115px;
+        gap: 7.1875rem;  // Ajuste do gap para rem
+        padding: 2.5rem 7.5rem;  // Ajuste de padding para telas maiores
+    }
+}
 
-        padding: 40px 120px;
+@media (max-width: 768px) {
+    .form-section {
+        padding: 2rem 1.5rem;  // Redução do padding para dispositivos menores
+
+        h3 {
+            font-size: 1.75rem;  // Redução do tamanho da fonte
+        }
+
+        p {
+            font-size: 0.875rem;  // Ajuste da fonte para p
+        }
+
+        form {
+            input {
+                height: 2.5rem;  // Menor altura para inputs em telas menores
+                margin-bottom: 1.5rem;  // Ajuste do espaçamento entre inputs
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .form-section {
+        padding: 1.5rem 1rem;  // Padding menor para dispositivos muito pequenos
+
+        h3 {
+            font-size: 1.5rem;  // Redução maior do título
+        }
+
+        p {
+            font-size: 0.75rem;  // Fonte reduzida para parágrafos
+        }
+
+        form {
+            input {
+                height: 2.25rem;  // Inputs ainda menores
+                margin-bottom: 1.25rem;  // Redução de espaçamento
+            }
+            btn-primary{
+                align-self: center;
+            }
+        }
     }
 }

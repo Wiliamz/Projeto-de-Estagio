@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>Inscrever Token em Tópico</h2>
+
+  <form (ngSubmit)="subscribeToTopic()">
+    <!-- Campo para inserir o token -->
+    <div>
+      <label for="token">Token do Dispositivo:</label>
+      <input
+        type="text"
+        id="token"
+        [(ngModel)]="token"
+        name="token"
+        placeholder="Insira o token do dispositivo"
+        required
+      />
+    </div>
+
+    <!-- Campo para inserir o nome do tópico -->
+    <div>
+      <label for="topic">Nome do Tópico:</label>
+      <input
+        type="text"
+        id="topic"
+        [(ngModel)]="topic"
+        name="topic"
+        placeholder="Insira o nome do tópico"
+        required
+      />
+    </div>
+
+    <!-- Botão para inscrever no tópico -->
+    <button type="submit">Inscrever</button>
+  </form>
+
+  <!-- Exibição de mensagens de sucesso ou erro -->
+  <div *ngIf="message">
+    <p [ngClass]="{ success: success, error: !success }">{{ message }}</p>
+  </div>
+</div>

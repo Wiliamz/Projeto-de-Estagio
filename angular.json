@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Estagio": {
+    "estagio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Estagio:build:production"
+              "buildTarget": "estagio:build:production"
             },
             "development": {
-              "buildTarget": "Estagio:build:development"
+              "buildTarget": "estagio:build:development"
             }
           },
           "defaultConfiguration": "development"

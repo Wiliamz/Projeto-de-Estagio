@@ -1,0 +1,66 @@
+<div *ngIf="isLoading" class="loading-spinner">
+  <!-- Ícone de carregamento ou spinner aqui -->
+  <i class="bi bi-arrow-clockwise"></i> Carregando...
+</div>
+
+<div *ngIf="!isLoading" class="notification-container">
+  <h2>Enviar Notificação</h2>
+  <form (submit)="enviarNotificacao()" #notificationForm="ngForm">
+    <!-- Campo para o Título da Notificação -->
+    <div class="form-group">
+      <label for="title">Título</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        class="form-control"
+        [(ngModel)]="title"
+        required
+      />
+    </div>
+
+    <!-- Campo para o Corpo da Notificação -->
+    <div class="form-group">
+      <label for="body">Mensagem</label>
+      <textarea
+        id="body"
+        name="body"
+        class="form-control"
+        [(ngModel)]="body"
+        required
+      ></textarea>
+    </div>
+
+    <!-- Campo para o Token do Dispositivo -->
+    <div class="form-group">
+      <label for="token">Token do Dispositivo</label>
+      <input
+        type="text"
+        id="token"
+        name="token"
+        class="form-control"
+        [(ngModel)]="token"
+        required
+      />
+    </div>
+
+    <!-- Botão para Enviar a Notificação -->
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!notificationForm.valid"
+    >
+      Enviar Notificação
+    </button>
+  </form>
+
+  <!-- Mensagem de Sucesso ou Erro -->
+  <div
+    *ngIf="message"
+    class="alert"
+    [ngClass]="{ 'alert-success': success, 'alert-danger': !success }"
+  >
+    {{ message }}
+  </div>
+</div>
+

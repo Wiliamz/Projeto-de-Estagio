@@ -6,39 +6,56 @@
     align-items: flex-start;
     flex-direction: column;
     max-width: 100%;
+    overflow: hidden; // Prevenindo que o conteúdo extrapole a largura
 
     img {
-
         display: inline;
-        margin-top: 10px;
+        margin-top: 0.625rem; // Usando rem para espaçamento
         align-items: center;
+        max-width: 100%; // Assegura que a imagem não ultrapasse a largura do contêiner
+        min-width: 80%;
+        min-height: 80%;
+        height: auto; // Mantém a proporção da imagem
     }
 
     h5 {
-        font-size: 24px;
+        font-size: 1.5rem; // Usando rem para responsividade
         font-weight: 600;
         margin: 0;
         color: $primary-text;
     }
 
     p {
-        font-size: 14px;
+        font-size: 0.875rem; // Usando rem para o texto
         font-weight: 400;
         color: $secondary-text;
     }
 }
 
-// @media (min-width: 768px) {
-//     .benefit-card {
-//         max-width: 600px;
+@media (min-width: 769px) {
+    .benefit-card {
+        max-width: 37.5rem; // Limita a largura máxima em telas maiores
 
-//         h5 {
-//             font-size: 32px;
-//         }
+        h5 {
+            font-size: 2rem; // Aumenta o tamanho do título para telas grandes
+        }
 
-//         p {
-//             font-size: 16px;
-//         }
-//     }
-// }
+        p {
+            font-size: 1rem; // Aumenta o tamanho do texto para telas maiores
+        }
+    }
+}
 
+@media (max-width: 768px) {
+    .benefit-card {
+        max-width: 100%; // Garante que o cartão ocupe toda a largura disponível em telas pequenas
+
+        h5 {
+            font-size: 1.25rem; // Reduz o tamanho do título em telas menores
+        }
+
+        p {
+            font-size: 0.75rem; // Reduz o texto para legibilidade em dispositivos móveis
+        }
+    }
+}

@@ -4,14 +4,19 @@
         <h3>
             Fique por dentro de tendencias
         </h3>
-        <p>Fique atento às tendências da Gigabyte Soluções, uma empresa de TI dedicada a oferecer soluções tecnológicas inovadoras e cursos profissionalizantes de alta qualidade. Estamos sempre acompanhando as últimas novidades do mercado, garantindo que você esteja preparado para os desafios do futuro digital. Com nossa expertise em tecnologia e educação, proporcionamos o conhecimento necessário para impulsionar sua carreira e melhorar seus resultados. Não perca as oportunidades de aprendizado e crescimento que oferecemos!</p>
+        <p>Fique atento às tendências da Gigabyte Soluções, uma empresa de TI dedicada a oferecer soluções tecnológicas
+            inovadoras e cursos profissionalizantes de alta qualidade. Estamos sempre acompanhando as últimas novidades
+            do mercado, garantindo que você esteja preparado para os desafios do futuro digital. Com nossa expertise em
+            tecnologia e educação, proporcionamos o conhecimento necessário para impulsionar sua carreira e melhorar
+            seus resultados. Não perca as oportunidades de aprendizado e crescimento que oferecemos!</p>
     </div>
 
     <form [formGroup]="newsletterForm">
         <label for="name">Nome</label>
-        <input id = "name" formControlName="name"/>
+        <input id="name" formControlName="name" />
         <label for="email">E-mail</label>
-        <input id = "email" formControlName="email"/>
-        <btn-primary btn-text="Se Inscreva" variant="secondary" (submit)="onSubmit()" [disabled]="!newsletterForm.valid"></btn-primary>
+        <input id="email" formControlName="email" />
+        <btn-primary btn-text="Se Inscreva" variant="secondary" (submit)="onSubmit()"
+            [disabled]="!newsletterForm.valid"></btn-primary>
     </form>
 </section>

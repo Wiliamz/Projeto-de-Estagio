@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
+
 type BtnVariants = "primary" | "secondary";
 
 @Component({
@@ -20,7 +21,7 @@ export class BtnPrimaryComponent {
 
   @Output("submit") onSubmit = new EventEmitter();
 
-  submit(){
+  submit() {
     this.onSubmit.emit();
   }
 }

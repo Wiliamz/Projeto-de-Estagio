@@ -1,0 +1,38 @@
+<div
+  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+>
+  <h1 class="h2">Administração</h1>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-body">
+        <div style="display: block">
+          <h2>Gráfico de Inscrições no Site</h2>
+          <canvas
+            baseChart
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [legend]="true"
+            type="line"
+          >
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-body">
+        <h2>Lista de Usuários</h2>
+        <ul>
+          <li *ngFor="let user of users">
+            {{ user.name }} - {{ user.email }} - {{ user.createdAt }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

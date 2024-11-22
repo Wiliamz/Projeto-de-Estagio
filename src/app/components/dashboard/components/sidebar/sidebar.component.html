@@ -1,0 +1,54 @@
+<div class="sidebar-container">
+  <!-- Botão fixo, sempre visível -->
+  <button class="toggle-sidebar btn btn-primary" (click)="toggleSidebar()">
+    <i class="bi" [ngClass]="isSidebarHidden ? 'bi-list' : 'bi-x'"></i>
+  </button>
+
+  <!-- Sidebar com classe dinâmica -->
+  <nav id="sidebar" [class.hidden]="isSidebarHidden" class="bg-light sidebar">
+    <!-- Conteúdo da sidebar -->
+    <div class="position-sticky">
+      <ul class="nav navbar-expand-sm flex-column">
+        <li class="nav-item">
+          <a class="nav-link active">
+            <i class="bi bi-house"></i>
+            Tela Inicial
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard/analytics">
+            <i class="bi bi-bar-chart"></i>
+            Analytics
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard">
+            <i class="bi bi-person"></i>
+            Inscritos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active">
+            <i class="bi bi-send"></i>
+            Notificações
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard/notification-token">
+            <i class="bi bi-upc"></i>
+            Token
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard/notification-sender">
+            <i class="bi bi-send"></i>
+            Envio de notificação
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="user">
+      <app-user-info></app-user-info>
+    </div>
+  </nav>
+</div>

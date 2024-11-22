@@ -1,64 +1,111 @@
 
-@import "../../../styles.scss";
 @import "../../../color-variables.scss";
 
 footer {
-
     margin-top: 40px;
-
-    position: absolute;
-
-
-    .socials {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
+    position: relative; // Para evitar sobreposição em telas pequenas
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    padding: 40px 70px;
-
+    padding: 20px 10px;
     background: $bg-secondary;
     color: white;
+    text-align: center;
 
-    text-align: justify;
+    .about p {
+        text-align: justify;
 
-    h3 {
-        font-size: 36px;
-        font-weight: 600;
-        margin-bottom: 20px;
+    }
+    .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px; // Reduzido o gap entre os ícones
+        margin: 20px 0;
     }
 
-    h5{
-        font-size: 20px;
+    h3 {
+        font-size: 1.75rem; // Ajustado para ser menor em telas pequenas
         font-weight: 600;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        margin-bottom: 0.75rem;
+    }
+
+    h5 {
+        font-size: 1.125rem; // Reduzi para melhorar a responsividade
+        font-weight: 500; // Levemente mais leve
+        margin: 0.75rem 0;
     }
 
     p {
-        font-size: 14;
+        font-size: 0.875rem;
         font-weight: 400;
+        max-width: 600px;
     }
 
     .text {
         flex: 1;
     }
-    .btn{
+
+    .btn {
         background: $light-primary-color;
+        padding: 8px 16px; // Padding mais suave
+        border: none;
+        border-radius: 4px; // Bordas levemente arredondadas
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s ease; // Animação suave no hover
 
+        &:hover {
+            background: darken($light-primary-color, 10%); // Botão escurece no hover
+        }
+
+        font-size: 0.875rem; // Tamanho de fonte ajustado
     }
-
 }
-@media (min-width: 1080px) {
-    .form-section {
-        flex-direction: row;
-        gap: 115px;
 
-        padding: 40px 120px;
+// Media Queries para responsividade
+@media (min-width: 768px) {
+    footer {
+        padding: 30px 20px; // Ajuste para telas médias
+
+        h3 {
+            font-size: 2rem; // Ajuste suave
+        }
+
+        h5 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: 0.9375rem;
+        }
+    }
+}
+
+@media (min-width: 1080px) {
+    footer {
+        padding: 40px 60px;
+
+        .socials {
+            gap: 25px;
+        }
+
+        h3 {
+            font-size: 2.5rem; // Ajuste mais controlado
+        }
+
+        h5 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem; // Ajuste para melhor leitura
+        }
+
+        .btn {
+            font-size: 1rem; // Botão com tamanho de texto maior para telas grandes
+        }
     }
 }

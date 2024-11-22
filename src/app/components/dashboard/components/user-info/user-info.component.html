@@ -1,0 +1,12 @@
+<div class="d-flex align-items-center user-info">
+    <!-- Ícone padrão de usuário -->
+    <i class="bi bi-person-circle" style="font-size: 2rem; margin-right: 10px;"></i>
+
+    <!-- Exibe o email do usuário logado -->
+    <span *ngIf="userEmail; else noUser">{{ userEmail }}</span>
+
+    <!-- Exibe mensagem caso o usuário não esteja logado -->
+    <ng-template #noUser>
+        <span>Usuário não logado</span>
+    </ng-template>
+</div>

@@ -1,6 +1,10 @@
 /* Centraliza a tela de login na página */
 .login-container {
   background-color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 13%;
   /* Fundo claro */
 }
 
@@ -9,6 +13,7 @@
   /* Canto arredondado para o card */
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
   /* Sombra suave */
 }
 
